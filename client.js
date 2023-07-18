@@ -832,12 +832,9 @@ var caminho2 = "M122.405937,242.241241 "
                 if (usedIds.includes(identificadorNumerario)){
                     
                     idToConsider = identificadorNumerario
-                    console.log('idToConsider: ' + idToConsider)
                     
                     ratingAntes = ratingsAntes[indexToGet]
                     ratingApos = ratingsApos[indexToGet]
-                    console.log('ratingAntes: ' + ratingAntes)
-                    console.log('ratingApos: ' + ratingApos)
 
                     //get all ratings by that user
                     //get the indexes of the selected id
@@ -850,11 +847,9 @@ var caminho2 = "M122.405937,242.241241 "
                     //get all the rating given
                     var allRatingsAntesByUser = []
                     var allRatingsAposByUser = []
-                    console.log('indexesForRatings: ' + indexesForRatings)
                     
                     for(let index4 = 0; index4 < idsNotOrganized.length; index4++){
                         if(indexesForRatings.includes(index4)){
-                            console.log('ratingsAntes[index4]: ' + ratingsAntes[index4])
                             allRatingsAntesByUser.push(ratingsAntes[index4])
                             allRatingsAposByUser.push(ratingsApos[index4]) 
                         }
@@ -908,8 +903,6 @@ var caminho2 = "M122.405937,242.241241 "
 
                     //CORES ANTES
                     for(let indexAntes = 0; indexAntes < allRatingsAntesByUser.length; indexAntes++){
-                        console.log('indexAntes: ' + indexAntes)
-                        console.log('allRatingsAntesByUser: ' + allRatingsAntesByUser)
                         if(allRatingsAntesByUser[indexAntes] >= 0 && allRatingsAntesByUser[indexAntes] < 1.5){
                             coresAntes.push('#F60D0D');
                             posiAntes.push(385);
